@@ -1,8 +1,6 @@
 # Drop size distribution from the breakup rate
 
-Compute the histogram of droplet sizes from the breakup rate
-
-We follow the model of Garrett (2000), in which drops of diameter $d$ break into $m$ equally sized daughter drops. Volume conservation gives the daughter-drop diameter $d' = d / m^{1/3}$.
+The code `popBalance.py` computes the histogram of droplet sizes from the breakup rate. We follow the model of Garrett (2000), in which drops of diameter $d$ break into $m$ equally sized daughter drops. Volume conservation gives the daughter-drop diameter $d' = d / m^{1/3}$.
 
 In steady state, the rate of drop removal equals the rate of creation:
 
@@ -11,8 +9,6 @@ N(d'),\tau(d'),d' = m,N(d),\tau(d),d,
 $$
 
 where $\tau(d)$ is the lifetime of a drop before breakup, and $N(d)\Delta d$ is the number of drops with diameters in the range $d$ to $d+\Delta d$.
-
----
 
 ## Breakup lifetimes
 
@@ -42,8 +38,6 @@ $$
 \exp!\left(\frac{-7.8,\sigma}{\rho,\epsilon^{2/3} d^{5/3}}\right).
 $$
 
----
-
 ## Iterative population balance
 
 We begin with a single drop of size $8d_H$, which lies in the inertial range, making the subsequent cascade insensitive to the precise starting size.
@@ -55,10 +49,10 @@ At each step, the population-balance equation gives $N(d')$ from the known $N(d)
 
 This corresponds physically to injecting drops of size $8d_H$ at a constant rate and letting them break up in turbulence.
 
----
-
 ## Resulting distributions
 
+![popBalance](popBalance.svg)
+ 
 Both models converge to the inertial-range prediction:
 
 $$
@@ -70,14 +64,6 @@ because far above $d_H$ both lifetimes scale as $d^{2/3}$, guaranteeing the clas
 Near $d_H$, however, the Coulaloglou–Tavlarides lifetime predicts thousands of times more drops, as surface tension greatly prolongs the breakup time.
 
 In this analysis we use binary breakups ($m=2$), but the results are insensitive to the choice of $m$ and to any prefactor multiplying the breakup rate (such as the 14.8 in $\tau_{CT}$). This robustness arises because the population balance depends only on the ratio $\tau(d)/\tau(d')$, causing such constants to cancel.
-
----
-
-## Figure
-
-![popBalance](popBalance.svg)
-
----
 
 ## References
 
