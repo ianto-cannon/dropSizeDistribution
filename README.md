@@ -1,8 +1,6 @@
-# Drop Size Distribution from the Breakup Rate
+# Drop size distribution from the breakup rate
 
 Compute the histogram of droplet sizes from the breakup rate
-
-**Ianto Cannon — \today**
 
 We follow the model of Garrett (2000), in which drops of diameter $d$ break into $m$ equally sized daughter drops. Volume conservation gives the daughter-drop diameter $d' = d / m^{1/3}$.
 
@@ -77,11 +75,15 @@ In this analysis we use binary breakups ($m=2$), but the results are insensitive
 
 ## Figure
 
-![popBalance](popBalance.pdf)
+![popBalance](popBalance.svg)
 
 ---
 
 ## References
 
+1. **C. A. Coulaloglou and L. L. Tavlarides**. “Description of Interaction Processes in Agitated Liquid-Liquid Dispersions.” *Chemical Engineering Science*, 32(11), 1289–1297 (1977). [DOI: 10.1016/0009-2509(77)85023-9](https://doi.org/10.1016/0009-2509%2877%2985023-9)
 
----
+2. **Chris Garrett, Ming Li, and David Farmer**. “The Connection between Bubble Size Spectra and Energy Dissipation Rates in the Upper Ocean.” *Journal of Physical Oceanography*, 30(9), 2163–2171 (2000). [DOI: 10.1175/1520-0485(2000)030<2163:TCBBSS>2.0.CO;2](https://doi.org/10.1175/1520-0485%282000%29030%3C2163:TCBBSS%3E2.0.CO;2)
+
+3. **Alberto Vela-Martín and Marc Avila**. “Memoryless Drop Breakup in Turbulence.” *Science Advances*, 8(50), eabp9561 (2022). [DOI: 10.1126/sciadv.abp9561](https://doi.org/10.1126/sciadv.abp9561)
+
